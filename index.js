@@ -47,7 +47,7 @@ app.use("/sales", salesRoutes);
 const PORT = process.env.PORT || 9000;
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(process.env.MONGO_URL, {})
+  .connect("mongodb+srv://asim:dantheman55@cluster0.82xbnnc.mongodb.net/?retryWrites=true&w=majority", {})
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port : ${PORT}`));
     // Only add data one time
